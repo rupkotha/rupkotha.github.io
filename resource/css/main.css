@@ -1,13 +1,13 @@
-body {
+* {
     padding: 10px;
     box-sizing: border-box;
 }
 
-aside,
+/* aside,
 nav,
 section {
     padding: 20px;
-}
+} */
 
 .logo {
     color: white;
@@ -39,7 +39,7 @@ footer {
 }
 
 textarea{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .result-indent{
