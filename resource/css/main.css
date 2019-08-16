@@ -51,6 +51,8 @@ textarea{
 } */
 
 iframe{
+    margin: 0%;
+    padding: 0%;
     height: 350px;
     width: 100%;
 }
