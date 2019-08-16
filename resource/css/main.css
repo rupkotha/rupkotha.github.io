@@ -43,17 +43,3 @@ footer {
 .result-indent{
     text-indent: 2rem;
 }
-
-iframe{
-    margin: 0%;
-    padding: 0%;
-    height:350px;
-    width: 100%;
-}
-
-textarea{
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-    font-size: 1.5rem;
-}
