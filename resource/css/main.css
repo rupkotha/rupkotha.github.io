@@ -38,21 +38,21 @@ footer {
     margin: 10px;
 }
 
-textarea{
-    font-size: 2rem;
-}
-
 .result-indent{
     text-indent: 2rem;
 }
 
-/* #imageid{
-    zoom: 2;
-} */
-
 iframe{
     margin: 0%;
     padding: 0%;
-    height: 350px;
+    height: 50%;
     width: 100%;
+}
+
+textarea{
+    margin: 0%;
+    padding: 0%;
+    height: 40%;
+    width: 100%;
+    font-size: 1.5rem;
 }
