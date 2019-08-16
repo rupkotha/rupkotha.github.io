@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="resource/css/main.css">
+    <link rel="stylesheet" href="resource/css/bootstrap.css">
+</head>
+
+<body onload="initial()">
+    <header class="text-center">
+        <p class="logo">Rupkotha</p>
+        <div class="d-flex justify-content-between">
+            <span>
+                <div>
+                    <a href="index.html" class="btn btn-outline-primary"><b>Home</b></a>
+                </div>
+                <div>
+                    <a href="mailto:rupkotha@protonmail.com" class="btn btn-outline-primary"><b>Request New Book</b></a>
+                </div>
+            </span>
+
+            <span>
+                <!-- <a href="editor.html" class="btn btn-danger" id="editor-button">Editor</a> -->
+                <div>
+                    <a href="#" class="btn btn-outline-primary" id="profile-button"><b>Profile</b></a>
+                </div>
+                <div>
+                    <a href="index.html" class="btn btn-outline-primary" id="logout-button" onclick="logout()"><b>Log
+                            out</b></a>
+
+                    <span id="login-header">
+                        <a href="login.html" class="btn btn-outline-primary" id="login-button"><b>Log in</b></a>
+                        <a href="registration.html" class="btn btn-outline-primary" id="registration-button"><b>
+                                Registration</b></a>
+                    </span>
+                </div>
+            </span>
+
+        </div>
+    </header>
+
+
+    <br><br><br>
+
+    <p class="text-primary">এই ওয়েবসাইটের উদ্দেশ্য কি?</p>
+    <p>ইপাব বানানোর টেকনিক্যাল জ্ঞান না থাকা মানুষও যাতে ইপাব তৈরিতে সাহায্য করতে পারে</p>
+    <br>
+    <p class="text-primary">এটি কি ভাবে কাজ করে ?</p>
+    <p>এখানে বইয়ের এক পেজের ছবি থাকবে আর এই পেজের OCR Text থাকবে।
+        <br>
+        Volunteers পেজ দেখে দেখে Text Box এর টেক্সট এর ভুল সংশোধন করবে।
+        <br>
+        পরবর্তিতে প্রোগামের সাহায্যে প্রতি পেজের টেক্সট একিভূত করা হবে যার দ্বারা ইপাব বানানো যাবে।
+    </p>
+    <br>
+
+    <p class="text-primary">সাহায্য করতে কি কি লাগবে?</p>
+    <p>
+        আপনাকে নতুন করে কোন সফটওয়ার ইন্সটল করতে হবে না।
+        মোবাইল বা কম্পিউটারে তো ব্রাউজার থাকেই (ক্রোম, ফায়ারফক্স, মাইক্রোসফট এজ ইত্যাদি)
+        আর লাগছে ইন্টারনেট যা সবাই ব্যবহার করছে।
+    </p>
+
+    <p class="text-primary">কিভাবে শুরু করব ?</p>
+    <p>
+        <ol>
+            <li>প্রথমে Registration করতে হবে। Registration করতে ইমেল আর পাসওয়াড লাগছে ।
+                পাসওয়াড ৬ ক্যারাক্টার হতে হবে (যেমন : 123456)
+            </li>
+            <li>
+                Registration করা থাকলে লগ ইন করতে হবে। পাসওয়াড ভুলে গেলে রিকওভারি করার সুযোগ নাই।
+                তখন আরেকটি Account খুলতে হবে।
+            </li>
+
+            <li>
+                Mobile ব্যবহার করলে আপনার পছন্দমত বই এর Mobile এ ক্লিক করুন অথবা Computer ব্যবহার করলে Computer এ ক্লিক
+                করুন ।
+            </li>
+
+            <li>
+                একটু সময় লাগবে সব ডাটা লোড হতে, তাই একটু অপেক্ষা করুন।
+
+            </li>
+
+            <li>
+                বইয়ের প্রথম পেজ দেখতে পারবেন।
+                এখন <button class="btn btn-primary">Next Incompleted Page</button>
+                এরকম বাটনে ক্লিক করুন যা আপনাকে Proof হয় নি এমন পেজে নিয়ে যাবে।
+            </li>
+
+            <li>
+                ছবি ডানে বানে, উপরে নিচে স্ক্রোল করা যাবে।
+                ছবি দেখে দেখে TextBox এ Text এর ভুল সংশোধন আর প্রয়োজনীয় space দিন।
+                ছবিতে নতুন লাইন থেকে বাক্য শুরু হলে TextBox এও নতুন লাইন থেকে শুরু করুন।
+
+            </li>
+
+            <li>
+                ছবির নিচে দুইটি চেকবক্স আছে যা চেক করলে UPDATE button UNLOCKED হবে। তখন UPLOAD এ ক্লিক করুন। একটু সময়
+                অপেক্ষা করুন, আপনাকে নতুন Proof হয় নি এমন পেজে নিয়ে যাবে।
+                <br>
+                <div id="footer-div-left">
+                    <b class="form-check-label"> I did </b>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="proof" id="proof-checkbox"
+                            onclick="checkSubmit()">
+                        <label class="form-check-label">Proof</label>
+
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="format" id="format-checkbox"
+                            onclick="checkSubmit()">
+                        <label class="form-check-label">Format</label>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="submit-button" onclick="" disabled>UPDATE</button>
+                </div>
+            </li>
+            <li>
+                এভাবেই ইপাব তৈরিতে সাহায্য করতে পারেন।
+            </li>
+        </ol>
+        <br>
+    </p>
+    <h3 class="text-danger">FAQ</h3>
+    <br>
+
+    <!-- <div class="card-group"> -->
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="text-primary card-title">Book Details</h4>
+        <p class="card-body">এতে বইয়ের নাম , লেখকের নাম, মোট পেজ, প্রুফ হয়েছে এমন পেজ আর কতটুকু কমপ্লিট হয়েছে তা
+            দেখা
+            যাবে। ১০০% কমপ্লিট
+            হইলে ইপাব বানানোর জন্য প্রস্তুত।</p>
+    </div>
+    <div class="card" style="width: 20rem;">
+        <h4 class="text-primary card-title">Page Details</h4>
+        <p class="card-body">এতে পেজের নাম্বার , ভার্শন, প্রুফ হয়েছে কি না আর Volunteer কে তা জানা যাবে।
+            "rupkotha" প্রাথমিক ভাবে থাকবে, কেউ আপডেট করলে তার ইমেল আপডেট হবে।
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="text-primary card-title">BOOK ID and Page</h4>
+        <p class="card-body">Book ID edit করা যাবে না।
+            <br>
+            শুধু পেজ নাম্বার edit করা যাবে।
+            <br>
+            <button class="btn btn-primary">GO</button>তে ক্লিক করলে কাঙ্খিত পেজে যাওয়া যাবে।
+            <br>
+            মনে রাখতে হবে, মোট পেজ থেকে বড় নাম্বার দিলে যাওয়া যাবে না।
+            কারন সেই পেজই তো নেই।
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"><button class="btn btn-secondary">Previous Page</button></h4>
+        <p class="card-body">আগের পেজে যাওয়া যাবে।
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"><button class="btn btn-info">Previous Page</button></h4>
+        <p class="card-body">পরের পেজে যাওয়া যাবে।
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"><button class="btn btn-primary">Next Incompleted Page</button></h4>
+        <p class="card-body">এখনো প্রুফ হয় নি এমন পেজে নিয়ে যাবে।
+            <br>
+            <b> অনেক গুরুত্বপূর্ণ বাটন</b>
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"> <button type="submit" class="btn btn-primary">Last Edited</button></h4>
+        <p class="card-body">সর্বশেষ আপডেট করা টেক্সট TextBox এ দেখাবে
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"> <button type="submit" class="btn btn-warning" onclick="getRaw()">Raw Text</button>
+        </h4>
+        <p class="card-body">OCR Text যা Google Drive API থেকে পাওয়া
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"> <button type="submit" class="btn btn-warning">Filter Text</button>
+        </h4>
+        <p class="card-body">OCR Text থেকে কমন ভুলগুলো সংশোধন করা Text
+        </p>
+    </div>
+
+
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title"> <button type="submit" class="btn btn-danger" onclick="clearTextArea()">Clear</button>
+        </h4>
+        <p class="card-body">TextBox কে ক্লিয়ার করার জন্য
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="proof" id="proof-checkbox">
+                <label class="form-check-label">Proof</label>
+
+            </div>
+        </h4>
+        <p class="card-body">বানান ভুল সংশোধন হয়েছে কি না?
+        </p>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-title">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="proof" id="proof-checkbox">
+                <label class="form-check-label">Format</label>
+
+            </div>
+        </h4>
+        <p class="card-body">বাক্যে প্রয়োজনীয় space দেওয়া হয়েছে কি না?
+            <br>
+            ছবিতে নতুন লাইন থেকে বাক্য শুরু হলে TextBox এও নতুন লাইন থেকে শুরু করেছেন কি না ?
+        </p>
+    </div>
+    <!-- </div> -->
+    <br>
+    <br>
+</body>
+<script src="../resource/javascript/one.js"></script>
+
+</html>
