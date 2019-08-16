@@ -49,3 +49,8 @@ textarea{
 /* #imageid{
     zoom: 2;
 } */
+
+iframe{
+    height: 350px;
+    width: 100%;
+}
