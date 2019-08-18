@@ -225,6 +225,7 @@ function goPage() {
     page = Number(document.getElementById("go-page").value)
     bookID = Number(document.getElementById("go-bookid").value) - 10000;
     newPage();
+    updateBookDetails();
     getBookDetails();
 }
 
