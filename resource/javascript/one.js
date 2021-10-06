@@ -325,7 +325,7 @@ function logout() {
 
 function initial() {
     isLogin();
-    bookID = 1;
+    bookID = 4;
     book = (10000 + bookID).toString();
 
 
