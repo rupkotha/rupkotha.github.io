@@ -371,10 +371,13 @@ function goResult() {
             }
         });
     }
-    setTimeout(function () {
-        s = s + "</p>";
-        // console.log(s);
-        document.getElementById("result-nav").disabled=true;
-        document.getElementById("result-text").innerHTML = s;
-    }, 5000);
+    s = s + "</p>";
+    document.getElementById("result-text").innerHTML = s;
+
+    // setTimeout(function () {
+    //     s = s + "</p>";
+    //     // console.log(s);
+    //     document.getElementById("result-nav").disabled=true;
+    //     document.getElementById("result-text").innerHTML = s;
+    // }, 5000);
 }
