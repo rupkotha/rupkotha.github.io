@@ -356,10 +356,10 @@ function goResult() {
 
     document.getElementById("result-text").innerHTML = "";
     book = (10000 + bookID).toString();
-    let s = '<h1 class="text-center alert-info"> Maximum Ten Pages </h1>'
+    let s = '<h1 class="text-center alert-info"> Maximum Fifty Pages </h1>'
     s = s + '<p class = "result-indent">';
 
-    for (i = from, j = i; i <= to && i < j + 10; i++) {
+    for (i = from, j = i; i <= to && i < j + 50; i++) {
         pn = (1000 + Number(i)).toString();
         ref = db.ref("book/" + book + "/pages/" + pn + "/text");
         ref.on("value", function (snapsot) {
